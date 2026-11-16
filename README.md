@@ -24,6 +24,10 @@ docker compose up --build
 
 起動したら http://localhost:5173 を開きます。
 
+## CI
+
+Drone CI を使います。main への push と PR のたびに、lint とビルドが通ることを確認します。
+
 ## 関連リポジトリ
 
 | リポジトリ | 役割 |

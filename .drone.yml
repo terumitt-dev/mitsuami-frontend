@@ -1,6 +1,13 @@
+# =========================
+# CI Pipeline
+# =========================
 kind: pipeline
 type: kubernetes
-name: base
+name: ci
+
+trigger:
+  event: [push, pull_request]
+  branch: [main]
 
 node_selector:
   node-role: drone
@@ -10,13 +17,11 @@ tolerations:
     effect: NoSchedule
 
 steps:
-  - name: no-op
-    image: alpine
+  # 本番用のイメージはまだないので、lint とビルドが通ることだけを確認する。
+  # シークレットは参照しない。
+  - name: build
+    image: node:26-bookworm-slim
     commands:
-      - echo "template repo - no build steps configured"
-
-# 各リポジトリでこのファイルをコピーして以下を追加
-# steps:
-#   - name: check-vars
-#   - name: setup-ecr-auth
-#   - name: build
+      - npm ci
+      - npm run lint
+      - npm run build
