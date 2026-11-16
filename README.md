@@ -30,7 +30,7 @@ docker compose up --build
 |---|---|
 | [mitsuami-backend](https://github.com/terumitt-dev/mitsuami-backend) | 司令塔。3つのユニットに質問を送り、多数決で結論を返す（Rails） |
 | [mitsuami-frontend](https://github.com/terumitt-dev/mitsuami-frontend) | 画面。質問を送り、賛否と結論を表示する（React） |
-| [mitsuami-unit-python](https://github.com/terumitt-dev/mitsuami-unit-python) | ユニット「科学者」（Python、FastAPI、PyTorch） |
-| [mitsuami-unit-go](https://github.com/terumitt-dev/mitsuami-unit-go) | ユニット「母」（Go、net/http、llama.cpp） |
-| [mitsuami-unit-rust](https://github.com/terumitt-dev/mitsuami-unit-rust) | ユニット「女」（Rust、axum、ONNX Runtime） |
+| [mitsuami-unit-python](https://github.com/terumitt-dev/mitsuami-unit-python) | ユニット「理性」（Python、FastAPI、PyTorch） |
+| [mitsuami-unit-go](https://github.com/terumitt-dev/mitsuami-unit-go) | ユニット「感情」（Go、net/http、llama.cpp） |
+| [mitsuami-unit-rust](https://github.com/terumitt-dev/mitsuami-unit-rust) | ユニット「本能」（Rust、axum、ONNX Runtime） |
 | mitsuami-personas（非公開） | 人格の定義、学習データ、追加学習と変換のスクリプト |
